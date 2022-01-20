@@ -1,0 +1,31 @@
+<br>
+<br>
+<a class="btn btn-primary" routerLink="/create-contrat">Create contract</a>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Description</th>
+    <th scope="col">Status</th>
+    <th scope="col">Date debut</th>
+    <th scope="col">Date Fin</th>
+    <th scope="col">Client</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = " let contrat of contrats">
+    <td>{{ contrat.id}}</td>
+    <td>{{ contrat.description}}</td>
+    <td>{{ contrat.status}}</td>
+    <td>{{ contrat.dateDebut}}</td>
+    <td>{{ contrat.dateFin}}</td>
+    <td>{{ contrat.client.email}}</td>
+    <td>
+      <button (click) = "deleteContrat(contrat.id)" class = "btn btn-danger">Supprimer</button>
+      <button  class = "btn btn-dark" (click) = "updateStatus(contrat.id)"  style="margin-left: 8px">  Status</button>
+      <button  class = "btn btn-info"  (click) = "contratDetails(contrat.id)" style="margin-left: 8px">Détails</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

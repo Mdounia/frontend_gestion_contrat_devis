@@ -1,0 +1,10 @@
+<div class="col-md-6 offset-md-3">
+  <div *ngFor="let l of ligneProduits" class="card">
+    <h5 class="card-header">Contrat :{{l.contrat.description}}</h5>
+    <div class="card-body">
+      <h5 class="card-title">Produit {{l.produit.libelle}}</h5>
+      <p class="card-text"> Quantité : {{l.quantite}}</p>
+      <p class="card-text">Montant :{{l.montant}} Dh</p>
+    </div>
+  </div>
+</div>

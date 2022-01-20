@@ -1,0 +1,26 @@
+<div class="col-md-6 offset-md-3">
+  <form (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" [(ngModel)] = "contrat.description" name="description" rows="3" disabled></textarea>
+    </div><br>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <input type="text" class="form-control" id="status" [(ngModel)] = "contrat.status" name="status" placeholder="Entrer le status">
+    </div><br>
+    <div class="form-group">
+      <label for="dateDebut">Date debut</label>
+      <input type="text" class="form-control" id="dateDebut" [(ngModel)] = "contrat.dateDebut" name="dateDebut" placeholder="Entrer la date de debut" disabled>
+    </div><br>
+    <div class="form-group">
+      <label for="dateFin">Date fin</label>
+      <input type="text"  class="form-control" id="dateFin" [(ngModel)] = "contrat.dateFin" name="dateFin" placeholder="Entrer la date fin" disabled>
+    </div><br>
+    <input class="form-select" name="client" [(ngModel)] = "contrat.client.id" hidden>
+<!--    <select class="form-select" name="client" [(ngModel)] = "contrat.client.id">-->
+<!--      <option >{{contrat.client.email}}</option>-->
+<!--    </select>-->
+    <br>
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </form>
+</div>
