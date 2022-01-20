@@ -13,6 +13,11 @@ import { LigneProduitContratComponent } from './ligne-produit-contrat/ligne-prod
 import { ContratDetailsComponent } from './contrat-details/contrat-details.component';
 import { UpdateContratStatusComponent } from './update-contrat-status/update-contrat-status.component';
 import { HomeComponent } from './home/home.component';
+import { DevisListComponent } from './devis-list/devis-list.component';
+import { CreateDevisComponent } from './create-devis/create-devis.component';
+import { UpdateDevisComponent } from './update-devis/update-devis.component';
+import { LigneProduitDevisComponent } from './ligne-produit-devis/ligne-produit-devis.component';
+import { DevisDetailsComponent } from './devis-details/devis-details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { HomeComponent } from './home/home.component';
     LigneProduitContratComponent,
     ContratDetailsComponent,
     UpdateContratStatusComponent,
-    HomeComponent
+    HomeComponent,
+    DevisListComponent,
+    CreateDevisComponent,
+    UpdateDevisComponent,
+    LigneProduitDevisComponent,
+    DevisDetailsComponent
   ],
   imports: [
     FormsModule,

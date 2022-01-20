@@ -19,7 +19,7 @@ export class CreateContratComponent implements OnInit {
   fieldsetDisabled = false
 
   ngOnInit(): void {
-    this.getClients()
+    this.getClients();
   }
   private getClients(){
     this.clientService.getAllClient().subscribe(

@@ -1,0 +1,29 @@
+<br>
+<form (ngSubmit) = "onSubmit()">
+  <select class="form-select" name="devis" [(ngModel)] = "ligneProduit.devis.code" >
+    <option *ngFor = " let d of devisList"  value="{{d.code}}" [disabled]="fieldsetDisabled" >
+      <p *ngIf="devis.libelle === d.libelle " >
+        {{d.libelle}}
+      </p>
+    </option>
+  </select>
+  <br>
+  <select class="form-select" name="produit" [(ngModel)] = "ligneProduit.produit.id"  >
+    <option *ngFor = " let produit of produits"  value="{{produit.id}}" [disabled]="fieldsetDisabled">{{produit.libelle}}</option>
+  </select>
+  <div class="form-group">
+    <label for="qte">Quantité</label>
+    <input type="number" [disabled]="fieldsetDisabled" class="form-control" id="qte" [(ngModel)] = "ligneProduit.quantite" name="quantite" placeholder="Entrer la quantité">
+  </div><br>
+  <div class="form-group">
+    <label for="montant">Montant</label>
+    <input type="number" [disabled]="fieldsetDisabled" class="form-control" id="montant" [(ngModel)] = "ligneProduit.montant" name="status"  >
+  </div><br>
+  <br>
+  <button type="submit" class="btn btn-primary">Enregistrer et ajouter une autre ligne de produit</button>
+  <button type="submit" class="btn btn-danger" (click)="goToList()">Enregistrer et cloturer le contrat</button>
+  <br>
+  <app-ligne-produit-devis [devis]="devis" *ngIf="isShow==true" ></app-ligne-produit-devis>
+</form>
+<br>
+<br>

@@ -1,0 +1,25 @@
+<br>
+<br>
+<a class="btn btn-primary" routerLink="/create-devis">Create Devis</a>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Libelle</th>
+    <th scope="col">Client</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = " let d of devis">
+    <td>{{ d.code}}</td>
+    <td>{{ d.libelle}}</td>
+    <td>{{ d.client.email}}</td>
+    <td>
+      <button (click) = "deleteDevis(d.code)" class = "btn btn-danger">Supprimer</button>
+<!--      <button  class = "btn btn-dark" (click) = "updateStatus(d.code)"  style="margin-left: 8px">  Status</button>-->
+      <button  class = "btn btn-info"  (click) = "devisDetails(d.code)" style="margin-left: 8px">Détails</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

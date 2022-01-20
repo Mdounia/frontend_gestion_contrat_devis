@@ -7,6 +7,10 @@ import {LigneProduitContratComponent} from "./ligne-produit-contrat/ligne-produi
 import {ContratDetailsComponent} from "./contrat-details/contrat-details.component";
 import {UpdateContratStatusComponent} from "./update-contrat-status/update-contrat-status.component";
 import {HomeComponent} from "./home/home.component";
+import {DevisListComponent} from "./devis-list/devis-list.component";
+import {CreateDevisComponent} from "./create-devis/create-devis.component";
+import {DevisDetailsComponent} from "./devis-details/devis-details.component";
+import {UpdateDevisComponent} from "./update-devis/update-devis.component";
 
 const routes: Routes = [
   {path :'contrats' , component : ContratListComponent},
@@ -16,6 +20,10 @@ const routes: Routes = [
   {path :'contrat-ligneProduit-details/:id' , component : ContratDetailsComponent},
   {path :'update-status-contrat/:id' , component : UpdateContratStatusComponent},
   {path :' ' , component : HomeComponent},
+  {path :'devis' , component : DevisListComponent},
+  {path :'create-devis' , component : CreateDevisComponent},
+  {path :'devis-ligneProduit-details/:id' , component : DevisDetailsComponent},
+  {path :'update-status-devis/:id' , component : UpdateDevisComponent},
 
 ];
 

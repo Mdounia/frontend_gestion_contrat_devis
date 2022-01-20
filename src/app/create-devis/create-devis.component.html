@@ -1,0 +1,15 @@
+<div class="col-md-6 offset-md-3">
+  <app-steps-contrat></app-steps-contrat>
+  <form (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+      <label for="libelle">Libelle</label>
+      <input type="text" [disabled]="fieldsetDisabled" class="form-control" id="libelle" [(ngModel)] = "devis.libelle" name="libelle" placeholder="Entrer le libelle">
+    </div><br>
+    <select class="form-select" name="client" [(ngModel)] = "devis.client.id">
+      <option *ngFor = " let client of clients" value="{{client.id}}" [disabled]="fieldsetDisabled">{{client.email}}</option>
+    </select>
+    <br>
+    <button type="submit" class="btn btn-primary">Enregistrer et passer à  l'étape suivante</button>
+  </form>
+  <app-ligne-produit-devis [devis]="devis" *ngIf="isShow==true" ></app-ligne-produit-devis>
+</div>
